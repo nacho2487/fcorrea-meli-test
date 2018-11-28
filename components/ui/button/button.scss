@@ -1,0 +1,6 @@
+@import "../tokens";
+
+.container {
+  margin: 0 auto;
+  max-width: #{$global-spacing-base * 256};
+}

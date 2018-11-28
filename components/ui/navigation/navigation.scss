@@ -1,0 +1,18 @@
+@import "../tokens";
+
+// Local variables
+$navigation-height: 56px;
+$navigation-background-color: $global-color-ml-yellow;
+
+.navigationWrapper {
+  background-color: $navigation-background-color;
+  height: $navigation-height;
+}
+
+.navigation {
+  height: $navigation-height;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
