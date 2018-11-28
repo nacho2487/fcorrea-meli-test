@@ -1,6 +1,11 @@
 @import "../tokens";
 
-.container {
-  margin: 0 auto;
-  max-width: #{$global-spacing-base * 256};
+// TODO: tokenise
+.textInput {
+  width: 100%;
+  height: 37px;
+  font-size: 18px;
+  border-radius: 3px;
+  border: none;
+  padding: 0 $global-spacing-large;
 }

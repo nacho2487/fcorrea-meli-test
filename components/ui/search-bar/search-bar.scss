@@ -1,6 +1,12 @@
 @import "../tokens";
 
-.container {
-  margin: 0 auto;
-  max-width: #{$global-spacing-base * 256};
+.searchBar {
+  width: 100%;
+  display: flex;
+  margin-left: $global-spacing-large;
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }

@@ -1,4 +1,6 @@
 import React from "react";
 import css from "./button.scss";
 
-export default props => <div className={css.container}>{props.children}</div>;
+export default props => (
+  <button className={css.button}>{props.children}</button>
+);
