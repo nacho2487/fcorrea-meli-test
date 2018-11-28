@@ -1,0 +1,20 @@
+/**
+ * Colors 
+ * (as specified by the provided specs)
+ */
+$global-color-ml-yellow: #ffe600;
+$global-color-black: #333333;
+$global-color-dark-gray: #666666;
+$global-color-light-gray: #999999;
+$global-color-white: #eeeeee;
+$global-color-cta-blue: #3483fa;
+
+/**
+ * Spacing
+ */
+$global-spacing-base: 4px;
+$global-spacing-xsmall: #{$global-spacing-base / 2};
+$global-spacing-small: #{$global-spacing-base};
+$global-spacing-medium: #{$global-spacing-base * 2};
+$global-spacing-large: #{$global-spacing-base * 4};
+$global-spacing-xlarge: #{$global-spacing-base * 8};
