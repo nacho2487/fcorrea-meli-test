@@ -4,6 +4,11 @@ import { TextInput, Button } from "../";
 
 export default props => (
   <div className={css.searchBar}>
-    <TextInput placeholder="Nunca dejes de buscar" /> <Button />
+    <form action="/items" method="get">
+      <TextInput name="q" placeholder="Nunca dejes de buscar" />
+      <Button search>
+        <img src="/static/assets/img/ic_Search@2x.png" />
+      </Button>
+    </form>
   </div>
 );

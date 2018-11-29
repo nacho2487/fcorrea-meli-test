@@ -5,8 +5,13 @@
   display: flex;
   margin-left: $global-spacing-large;
 
-  input {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  form {
+    display: flex;
+    width: 100%;
+
+    input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }

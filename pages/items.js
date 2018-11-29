@@ -1,5 +1,7 @@
 import React from "react";
-import MercadoLibreAPI from "../lib/meli";
+import Head from "../components/head";
+
+import MercadoLibreAPI from "../lib/meli/api";
 import withNavigation from "../components/layout/with-navigation";
 
 class ItemSearchResultsPage extends React.Component {
@@ -13,6 +15,7 @@ class ItemSearchResultsPage extends React.Component {
     console.log(this.props);
     return (
       <div>
+        <Head title="Resultados de busqueda" />
         <pre>{JSON.stringify(this.props.items)}</pre>
       </div>
     );

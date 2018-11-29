@@ -2,5 +2,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: #{$global-spacing-base * 256};
+  padding-left: $global-spacing-large;
+  padding-right: $global-spacing-large;
+  max-width: #{$global-spacing-base * 265};
 }
