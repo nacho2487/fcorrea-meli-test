@@ -1,8 +1,10 @@
+require("@babel/register");
 require("dotenv").config();
 
 const express = require("express");
 const next = require("next");
 const { nextProxyBuilder } = require("./lib/next-proxy");
+const MercadoLibreAPI = require("./lib/meli").default;
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -12,6 +14,7 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   const proxyToNext = nextProxyBuilder(app, server);
+  const meli = new MercadoLibreAPI(process.env.SITE);
 
   // View routes
 
@@ -24,13 +27,17 @@ app.prepare().then(() => {
 
   // API routes
 
-  server.get("/api/items", async (req, res) => {
-    return {};
-  });
+  server.get("/api/items", (req, res) =>
+    meli.getSearchResults(req.query.q).then(response => {
+      res.json(response);
+    })
+  );
 
-  server.get("/api/items/:id", async (req, res) => {
-    return {};
-  });
+  server.get("/api/items/:id", (req, res) =>
+    meli.getItem(req.params.id).then(response => {
+      res.json(response);
+    })
+  );
 
   server.get("*", (req, res) => {
     return handle(req, res);

@@ -2,8 +2,7 @@ import React from "react";
 
 import Head from "../components/head";
 import withNavigation from "../components/layout/with-navigation";
-
-import MercadoLibreAPI from "../lib/meli/api";
+const MercadoLibreAPI = require("../lib/meli").default;
 
 class ItemSearchResultsPage extends React.Component {
   static async getInitialProps({ query }) {
