@@ -1,15 +1,17 @@
 import React from "react";
+import { withRouter } from "next/router";
+
 import { Navigation, Container } from "../ui";
 
 const withNavigation = Page => {
-  const PageWithNavigation = props => (
+  const PageWithNavigation = withRouter(props => (
     <React.Fragment>
-      <Navigation />
+      <Navigation searchTerm={props.router.query.q} />
       <Container>
         <Page {...props} />
       </Container>
     </React.Fragment>
-  );
+  ));
 
   PageWithNavigation.getInitialProps = Page.getInitialProps;
 

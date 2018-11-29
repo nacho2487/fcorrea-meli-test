@@ -6,7 +6,7 @@ import { Button } from "../components/ui";
 
 const Home = () => (
   <div>
-    <Head title="Home" />
+    <Head title="Mercado Libre" />
   </div>
 );
 

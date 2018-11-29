@@ -1,4 +1,4 @@
-const path = require("path");
+const webpack = require("webpack");
 const withSass = require("@zeit/next-sass");
 
 const cssSettings = {
@@ -14,6 +14,8 @@ const webpackSettings = config => {
   config.node = {
     fs: "empty"
   };
+
+  config.plugins.push(new webpack.EnvironmentPlugin(process.env));
 
   return config;
 };

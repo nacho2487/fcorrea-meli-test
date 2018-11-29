@@ -9,7 +9,7 @@ export default props => (
     <Container>
       <nav className={css.navigation}>
         <Logo />
-        <SearchBar />
+        <SearchBar searchTerm={props.searchTerm} />
       </nav>
     </Container>
   </div>
