@@ -1,7 +1,8 @@
 import React from "react";
 import MercadoLibreAPI from "../lib/meli";
+import withNavigation from "../components/layout/with-navigation";
 
-export default class ItemSearchResultsPage extends React.Component {
+class ItemSearchResultsPage extends React.Component {
   static async getInitialProps({ query }) {
     const meli = new MercadoLibreAPI("MLU");
     const items = await meli.getSearchResults(query.q);
@@ -17,3 +18,5 @@ export default class ItemSearchResultsPage extends React.Component {
     );
   }
 }
+
+export default withNavigation(ItemSearchResultsPage);

@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
-import { Navigation } from "../components/ui";
+import withNavigation from "../components/layout/with-navigation";
 
 const Home = () => (
   <div>
     <Head title="Home" />
-    <Navigation />
   </div>
 );
 
-export default Home;
+export default withNavigation(Home);
