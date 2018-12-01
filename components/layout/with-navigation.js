@@ -1,16 +1,18 @@
 import React from "react";
 import { withRouter } from "next/router";
+import NProgress from "next-nprogress/component";
 
 import { Navigation, Container } from "../ui";
 
 const withNavigation = Page => {
   const PageWithNavigation = withRouter(props => (
-    <React.Fragment>
-      <Navigation searchTerm={props.router.query.q} />
+    <div>
+      <NProgress color="#333" />
+      <Navigation searchTerm={props.router.query.search} />
       <Container>
         <Page {...props} />
       </Container>
-    </React.Fragment>
+    </div>
   ));
 
   PageWithNavigation.getInitialProps = Page.getInitialProps;

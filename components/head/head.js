@@ -24,10 +24,6 @@ const Head = props => (
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500"
-      rel="stylesheet"
-    />
     <meta property="og:url" content={props.url || defaultOGURL} />
     <meta property="og:title" content={props.title || ""} />
     <meta

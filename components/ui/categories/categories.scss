@@ -1,0 +1,19 @@
+@import "../tokens";
+
+.categories {
+  margin-top: 16px;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.categoryItem {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 14px;
+
+  .chevron {
+    width: 10px;
+    margin: 0 5px;
+    opacity: 0.5;
+  }
+}

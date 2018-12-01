@@ -1,0 +1,77 @@
+@import "../tokens";
+
+$thumbnail-desktop-size: 180px;
+$thumbnail-tablet-size: 120px;
+$thumbnail-mobile-size: 50%;
+
+.searchListItem {
+  padding: 16px;
+  background-color: white;
+  border-bottom: 1px solid $global-color-white;
+  display: flex;
+
+  img.thumbnail {
+    width: $thumbnail-desktop-size;
+    height: $thumbnail-desktop-size;
+    border-radius: 4px;
+    margin-right: 16px;
+  }
+
+  .price {
+    font-size: 24px;
+    margin: 32px 0;
+    color: $global-color-black;
+
+    .freeShippingIndicator {
+      margin-left: 8px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $global-color-black;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: normal;
+    color: $global-color-black;
+  }
+
+  .productDetails {
+    width: 55%;
+  }
+
+  .cityName {
+    margin-top: 32px;
+    font-size: 16px;
+    color: $global-color-black;
+  }
+
+  @media screen and (max-width: $tablet) {
+    img.thumbnail {
+      width: $thumbnail-tablet-size;
+      height: $thumbnail-tablet-size;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    text-align: center;
+
+    img.thumbnail {
+      width: $thumbnail-mobile-size;
+      height: $thumbnail-mobile-size;
+      margin: 0 auto;
+    }
+
+    .productDetails {
+      width: 100%;
+    }
+
+    .cityName {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

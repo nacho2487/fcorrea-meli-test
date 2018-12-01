@@ -1,3 +1,6 @@
+@import "../ui/tokens";
+
 body {
-  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: $global-color-white;
 }

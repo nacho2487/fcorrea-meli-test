@@ -1,18 +1,21 @@
-require("@babel/register");
 require("dotenv").config();
 
 const express = require("express");
 const next = require("next");
+const compression = require("compression");
 const { nextProxyBuilder } = require("./lib/next-proxy");
-const MercadoLibreAPI = require("./lib/meli").default;
+import MercadoLibreAPI from "./lib/meli";
 
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(process.env.PORT, 10) || 5000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
+
+  if (!dev) server.use(compression());
+
   const proxyToNext = nextProxyBuilder(app, server);
   const meli = new MercadoLibreAPI(process.env.SITE);
 

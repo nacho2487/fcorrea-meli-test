@@ -6,7 +6,7 @@ export default props => (
   <div className={css.searchBar}>
     <form action="/items" method="get">
       <TextInput
-        name="q"
+        name="search"
         placeholder="Nunca dejes de buscar"
         required
         defaultValue={props.searchTerm}

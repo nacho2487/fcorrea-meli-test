@@ -1,21 +1,13 @@
 {
-  "env": {
-    "production": {
-      "presets": ["next/babel"]
-    },
-    "development": {
-      "presets": [
-        [
-          "next/babel",
-          {
-            "@babel/preset-env": {
-              "targets": {
-                "node": true
-              }
-            }
-          }
-        ]
-      ]
-    }
-  }
+  "presets": [
+    "next/babel",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ]
+  ]
 }

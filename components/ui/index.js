@@ -4,5 +4,18 @@ import Logo from "./logo";
 import TextInput from "./text-input";
 import Button from "./button";
 import SearchBar from "./search-bar";
+import SearchList from "./search-list";
+import SearchListItem from "./search-list-item";
+import Categories from "./categories";
 
-export { Navigation, Container, Logo, TextInput, Button, SearchBar };
+export {
+  Navigation,
+  Container,
+  Logo,
+  TextInput,
+  Button,
+  SearchBar,
+  SearchList,
+  SearchListItem,
+  Categories
+};
