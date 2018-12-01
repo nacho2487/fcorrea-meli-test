@@ -4,8 +4,6 @@ import { string } from "prop-types";
 import "./global.scss";
 
 const defaultDescription = "";
-const defaultOGURL = "";
-const defaultOGImage = "";
 
 const Head = props => (
   <NextHead>
@@ -24,18 +22,18 @@ const Head = props => (
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <meta property="og:url" content={props.url || defaultOGURL} />
+    {props.url && <meta property="og:url" content={props.url} />}
     <meta property="og:title" content={props.title || ""} />
     <meta
       property="og:description"
       content={props.description || defaultDescription}
     />
-    <meta name="twitter:site" content={props.url || defaultOGURL} />
+    {props.url && <meta name="twitter:site" content={props.url} />}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {props.ogImage && <meta name="twitter:image" content={props.ogImage} />}
+    {props.ogImage && <meta property="og:image" content={props.ogImage} />}
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="180" />
   </NextHead>
 );
 

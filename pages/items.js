@@ -16,7 +16,7 @@ class ItemSearchResultsPage extends React.Component {
   render() {
     return (
       <div>
-        <Head title={`'${this.props.query}' | Mercado Libre`} />
+        <Head title={`Encontrá ${this.props.query} en Mercado Libre`} />
         <Categories categories={this.props.items.categories} />
         <SearchList items={this.props.items.items} />
       </div>

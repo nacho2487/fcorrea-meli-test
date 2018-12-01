@@ -12,7 +12,7 @@ const formatDecimal = number => {
 
 const FreeShippingIndicator = () => (
   <img
-    className={css.fclass}
+    className={css.freeShippingIndicator}
     width="18px"
     src="/static/assets/img/ic_shipping@2x.png"
   />
