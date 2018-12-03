@@ -28,6 +28,10 @@ $mobile-description-width: 100%;
       }
     }
 
+    .metadata {
+      margin-left: $global-spacing-large;
+    }
+
     .preTitle {
       font-size: 14px;
       margin-bottom: $global-spacing-large;
@@ -76,10 +80,6 @@ $mobile-description-width: 100%;
       .picture {
         min-width: $tablet-picture-size;
         height: $tablet-picture-size;
-      }
-
-      .metadata {
-        margin-left: $global-spacing-large;
       }
     }
   }

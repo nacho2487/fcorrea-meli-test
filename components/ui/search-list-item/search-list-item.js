@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import css from "./search-list-item.scss";
-import { currencify, formatDecimal } from "../../../lib/pricing";
+import { currencify, formatDecimal, formatAmount } from "../../../lib/pricing";
 
 const FreeShippingIndicator = () => (
   <img
@@ -16,7 +16,7 @@ export default ({ item }) => (
     <img className={css.thumbnail} src={item.picture} />
     <div className={css.productDetails}>
       <p className={css.price}>
-        {currencify(item.price.currency)} {item.price.amount}
+        {currencify(item.price.currency)} {formatAmount(item.price.amount)}
         <sup>{formatDecimal(item.price.decimals)}</sup>
         {item.free_shipping && <FreeShippingIndicator />}
       </p>

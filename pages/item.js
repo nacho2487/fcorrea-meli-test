@@ -17,7 +17,11 @@ class ItemDetailPage extends React.Component {
     const { item } = this.props;
     return (
       <div>
-        <Head />
+        <Head
+          title={item.title}
+          ogImage={item.picture}
+          description={`${item.title} en MercadoLibre`}
+        />
         <Categories categories={item.categories} />
         <ItemDetail item={item} />
       </div>

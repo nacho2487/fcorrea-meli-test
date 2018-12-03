@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./item-detail.scss";
-import { currencify, formatDecimal } from "../../../lib/pricing";
+import { currencify, formatDecimal, formatAmount } from "../../../lib/pricing";
 import { Button } from "../";
 
 const renderItemCondition = item =>
@@ -20,7 +20,7 @@ export default ({ item }) => (
         </p>
         <h1 className={css.title}>{item.title}</h1>
         <p className={css.price}>
-          {currencify(item.price.currency)} {item.price.amount}
+          {currencify(item.price.currency)} {formatAmount(item.price.amount)}
           <sup>{formatDecimal(item.price.decimals)}</sup>
         </p>
         <Button cta size="full">
