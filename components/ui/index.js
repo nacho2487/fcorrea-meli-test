@@ -8,6 +8,7 @@ import SearchList from "./search-list";
 import SearchListItem from "./search-list-item";
 import Categories from "./categories";
 import ItemDetail from "./item-detail";
+import ErrorState from "./error-state";
 
 export {
   Navigation,
@@ -19,5 +20,6 @@ export {
   SearchList,
   SearchListItem,
   Categories,
-  ItemDetail
+  ItemDetail,
+  ErrorState
 };

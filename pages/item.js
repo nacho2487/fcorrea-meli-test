@@ -1,7 +1,7 @@
 import React from "react";
 import withNavigation from "../components/layout/with-navigation";
 import Head from "../components/head";
-import { Categories, ItemDetail } from "../components/ui";
+import { Categories, ItemDetail, ErrorState } from "../components/ui";
 
 import MercadoLibreAPI from "../lib/meli";
 
@@ -13,8 +13,13 @@ class ItemDetailPage extends React.Component {
     return { item: response.item, query: query.search };
   }
 
+  renderErrorState() {
+    return <ErrorState />;
+  }
+
   render() {
     const { item } = this.props;
+
     return (
       <div>
         <Head
