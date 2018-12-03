@@ -7,8 +7,7 @@ import MercadoLibreAPI from "../lib/meli";
 
 class ItemDetailPage extends React.Component {
   static async getInitialProps({ query }) {
-    const isServer = !process.browser;
-    const meli = new MercadoLibreAPI(process.env.SITE, isServer);
+    const meli = new MercadoLibreAPI(process.env.SITE, true);
     const response = await meli.getItem(query.id);
 
     return { item: response.item, query: query.search };

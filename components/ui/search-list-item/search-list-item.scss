@@ -6,14 +6,13 @@ $thumbnail-mobile-size: 50%;
 
 .searchListItem {
   padding: 16px;
-  background-color: white;
   border-bottom: 1px solid $global-color-white;
   display: flex;
 
   img.thumbnail {
     width: $thumbnail-desktop-size;
     height: $thumbnail-desktop-size;
-    border-radius: 4px;
+    border-radius: $global-border-radius;
     margin-right: 16px;
   }
 
@@ -24,6 +23,10 @@ $thumbnail-mobile-size: 50%;
 
     .freeShippingIndicator {
       margin-left: 8px;
+    }
+
+    sup {
+      font-size: 14px;
     }
   }
 
