@@ -8,17 +8,22 @@ import MercadoLibreAPI from "../lib/meli";
 
 class ItemSearchResultsPage extends React.Component {
   static async getInitialProps({ query }) {
-    const meli = new MercadoLibreAPI(process.env.SITE);
+    const isServer = !process.browser;
+    const meli = new MercadoLibreAPI(process.env.SITE, isServer);
     const items = await meli.getSearchResults(query.search);
 
     return { items, query: query.search };
   }
   render() {
+    const { items, query } = this.props;
     return (
       <div>
-        <Head title={`Encontrá ${this.props.query} en Mercado Libre`} />
-        <Categories categories={this.props.items.categories} />
-        <SearchList items={this.props.items.items} />
+        <Head
+          title={`Encontrá "${query}" en Mercado Libre`}
+          description={`Buscá y encontrá "${query}" y miles de articulos mas en MercadoLibre.com`}
+        />
+        <Categories categories={items.categories} />
+        <SearchList items={items.items} />
       </div>
     );
   }

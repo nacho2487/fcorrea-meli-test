@@ -7,6 +7,7 @@ import SearchBar from "./search-bar";
 import SearchList from "./search-list";
 import SearchListItem from "./search-list-item";
 import Categories from "./categories";
+import ItemDetail from "./item-detail";
 
 export {
   Navigation,
@@ -17,5 +18,6 @@ export {
   SearchBar,
   SearchList,
   SearchListItem,
-  Categories
+  Categories,
+  ItemDetail
 };

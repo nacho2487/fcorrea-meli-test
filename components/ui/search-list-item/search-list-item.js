@@ -1,14 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import css from "./search-list-item.scss";
-
-const currencify = currency => (currency === "USD" ? "U$S" : "$");
-const formatDecimal = number => {
-  const formatted = (number < 10 ? "0" : "") + number;
-  const irrelevant = "00";
-
-  return formatted === irrelevant ? null : formatted;
-};
+import { currencify, formatDecimal } from "../../../lib/pricing";
 
 const FreeShippingIndicator = () => (
   <img
