@@ -30,9 +30,8 @@ class ItemSearchResultsPage extends React.Component {
   render() {
     const { items, query } = this.props;
 
-    if (items.items.length === 0) {
-      return this.renderEmptyState();
-    }
+    if (items.error) return this.renderErrorState();
+    if (items.items.length === 0) return this.renderEmptyState();
 
     return (
       <div>

@@ -10,15 +10,28 @@ class ItemDetailPage extends React.Component {
     const meli = new MercadoLibreAPI(process.env.SITE, true);
     const response = await meli.getItem(query.id);
 
-    return { item: response.item, query: query.search };
+    return { response, query: query.search };
   }
 
-  renderErrorState() {
+  renderErrorState(error) {
+    if (error.payload.status === 404) {
+      return (
+        <ErrorState
+          title="¡Ups! El articulo que buscás no existe."
+          message="Intenta buscando tu articulo en la barra de busqueda."
+        />
+      );
+    }
+
     return <ErrorState />;
   }
 
   render() {
-    const { item } = this.props;
+    const { response } = this.props;
+
+    if (response.error) return this.renderErrorState(response);
+
+    const { item } = response;
 
     return (
       <div>
