@@ -20,7 +20,7 @@ export default ({ item }) => (
         <sup>{formatDecimal(item.price.decimals)}</sup>
         {item.free_shipping && <FreeShippingIndicator />}
       </p>
-      <Link prefetch href={`/items/${item.id}`}>
+      <Link href={`/items/${item.id}`}>
         <a>
           <h3 className={css.title}>{item.title}</h3>
         </a>

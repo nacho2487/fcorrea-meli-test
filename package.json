@@ -1,9 +1,10 @@
 {
-  "name": "create-next-example-app",
+  "name": "meli-frontend-test",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
     "start": "NODE_ENV=production node index.js",
-    "prestart": "next build"
+    "prestart": "next build",
+    "build": "next build"
   },
   "dependencies": {
     "@babel/cli": "^7.1.5",
