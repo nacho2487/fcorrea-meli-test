@@ -7,6 +7,7 @@ Desarrollado y probado con node `8.9.4`, yarn `1.12.1` (o npm `5.6.0`).
 ## Entorno
 
 Se han seteado dos variables de entorno:
+
 | Nombre | Default | Descripción |
 | ------ | ------- | ---------------------------------------- |
 | SITE | `MLA` | Sitio (país) a donde la app se conectará |
